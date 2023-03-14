@@ -2,6 +2,7 @@
 
 # Convert Cisco Router ACL to Fortinet firewall rules and objects
 # Creates output files that can be copy-pasted to Fortinet firewall
+#
 # Thanks to Fortinet for not providing a usable API documentation *stinkefinger-smiley*
 #
 # dj0Nz Mar 2023
@@ -22,6 +23,7 @@ rules = []
 topology = {
     "0.0.0.0/0":"bond3",
     "192.168.3.0/24":"bond0.203",
+    "10.10.0.0/16":"eth7",
 }
 
 # Start-ID for new rules
@@ -53,10 +55,6 @@ def if_lookup_net (addr):
     return(interface)
 
 # Convert Cisco ip acl to "any" rule
-# Todo: 
-# - Distinguish net/host objects and position in acl
-# - save file in copy-paste format
-# Convert ip any rule
 def create_ip_rule (testacl):
     rule = []
     # Set action based on acl[0]
