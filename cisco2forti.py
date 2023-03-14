@@ -111,7 +111,6 @@ def create_ip_rule (testacl):
     # Firewall rule objects - needs to be transformed to "write command to file" and "use defined object format"
     rule=[source,srcif,destination,dstif,service,action]
     # Output for troubleshooting
-    print(rule)
     rules.append(rule)
 
     
@@ -166,14 +165,9 @@ for line in ciscoacls:
         if wildcard:
             netobject = acl[index-1] + '/' + convert_wildcard (acl[index]) 
             netobjects.append(netobject)
-        # Content checking: Output with space delimiter
-        # print(acl[index], end = ' ')
-    # Content checking: Linefeed after complete line
-    # print()
     # Rules section
-    rules.append(acl)
-    #if acl[1] == 'ip':
-    #    create_ip_rule(acl)
+    if acl[1] == 'ip':
+        create_ip_rule(acl)
 
 
 # Write objects to file in copy-paste-to-fortinet format
