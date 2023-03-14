@@ -184,14 +184,14 @@ with open(objectsfile, 'w') as file:
     for x in range(len(netobjects)):
         netname,netmask = netobjects[x].split('/')
         if netmask == '32':
-            file.write('edit host_' + netobjects[x] + '\n')
+            file.write('edit host_' + netname + '\n')
             file.write('  set subnet ' + netobjects[x] + '\n')
             file.write('next\n')
         else:    
             file.write('edit net_' + netname + '_' + netmask + '\n')
             file.write('  set subnet ' + netobjects[x] + '\n' )
             file.write('next\n')
-    file.write('end')
+    file.write('end\n')
 
 # Checking list contents
 print(*netobjects, sep = '\n')
