@@ -22,8 +22,8 @@ rules = []
 # Network topology - Routes and interfaces on Fortigate
 topology = {
     "0.0.0.0/0":"bond3",
-    "192.168.3.0/24":"bond0.203",
-    "10.10.0.0/16":"eth7",
+    "129.206.0.0/16":"bond0.203",
+    "10.0.0.0/8":"eth7",
 }
 
 # Start-ID for new rules
