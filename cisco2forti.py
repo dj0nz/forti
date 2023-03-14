@@ -109,7 +109,7 @@ def create_ip_rule (testacl):
     dstif = if_lookup_net(destination)
 
     # Firewall rule objects - needs to be transformed to "write command to file" and "use defined object format"
-    rule=[action,service,source,srcif,destination,dstif]
+    rule=[source,srcif,destination,dstif,service,action]
     # Output for troubleshooting
     print(rule)
     rules.append(rule)
