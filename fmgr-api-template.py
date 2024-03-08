@@ -99,10 +99,11 @@ method = 'get'
 url = '/sys/status'
 status = api_call(method,url,sid)
 
-# pretty-print. either with json.dumps or pipe output to 'tr "'" '"'|jq .'
-# print(json.dumps(status, indent=2))
-# print(status)
+# get data for further processing
 data = status['result'][0]['data']
+
+# in poc: pretty-print. either with json.dumps or pipe output to 'tr "'" '"'|jq .'
+print(json.dumps(data, indent=2))
 
 # end main
 ##########
