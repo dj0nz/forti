@@ -2,6 +2,7 @@
 
 # FortiManager api template
 # Howto: https://community.fortinet.com/t5/FortiManager/Technical-Tip-Using-FortiManager-API/ta-p/221089
+# Attention: API requests must be explicitly allowed per user
 # dj0Nz mar 2024
 
 # Basic modules needed to query mgmt api
