@@ -4,7 +4,8 @@
 # Creates output files that can be copy-pasted to Fortinet firewall
 #
 # Thanks to Fortinet for not providing a usable API documentation *stinkefinger-smiley*
-#
+# Update Mar 2024: API documentation is there, but not public
+# 
 # dj0Nz Mar 2023
 
 import re
@@ -21,9 +22,9 @@ rules = []
 
 # Network topology - Routes and interfaces on Fortigate
 topology = {
-    "0.0.0.0/0":"bond3",
-    "129.206.0.0/16":"bond0.203",
-    "10.0.0.0/8":"eth7",
+    "0.0.0.0/0":"bond1",
+    "192.168.0.0/16":"bond0.201",
+    "10.0.0.0/8":"bond0.202",
 }
 
 # Start-ID for new rules
