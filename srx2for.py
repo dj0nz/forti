@@ -39,6 +39,10 @@
 #   - vip-commands
 #   - firewall-rules
 # - manually verify created rules and test the configuration
+#
+# one final note:
+# i am not a python developer. when i learned to program 40 years ago, there was assembler, basic and c. 
+# so please excuse my coding style which might not be "pythonic" in any way... ;)
 
 # djonz jul 25
 
